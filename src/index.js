@@ -1,4 +1,4 @@
-export * from 'fetchTimeout';
+export * from './fetchTimeout';
 export { default as Formatter } from './Formatter';
 export { default as URLParse } from './URLParse';
 export { default as Log } from './Log';
