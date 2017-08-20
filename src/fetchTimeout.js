@@ -1,6 +1,6 @@
-export const fetchTimeout = (fetchPromise, timeout) => {
+export const fetchTimeout = (fetchPromise, timeout = 6000) => {
     let abortFunc = null;
-    let abortFromise = new Promise((resolve, reject) => {
+    let abortPromise = new Promise((resolve, reject) => {
         abortFunc = msg => {
             reject(msg || 'timeout');
         }
