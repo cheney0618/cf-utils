@@ -4,7 +4,7 @@ export const fetchTimeout = (fetchPromise, timeout = 6000) => {
         abortFunc = msg => {
             reject({
                 status: 408,
-                statusText: msg || 'timeout',
+                statusText: msg || '请求超时！',
             });
         }
     });

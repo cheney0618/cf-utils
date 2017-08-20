@@ -36,7 +36,7 @@ const toPercent = (number, fractionSize, options) => {
  */
 const toPrice = (number, options) => {
     const opt = {
-        fractionSize: 0,
+        fractionSize: 2,
         exchangeRate: 100,
         unitName: '',
         currency: '',
@@ -65,7 +65,7 @@ const toPrice = (number, options) => {
  * @param {Number} [options.fractionSize] 保留小数位数，默认保留两位小数
  * @param {Number} [options.exchangeRate] 换算比率，默认价格按分换算为元
  * @param {String} [options.unitName] 单位名称，默认为空
- * @param {String} [options.currency] 货币符号，默认为人民币符号：￥
+ * @param {String} [options.currency] 货币符号，默认为空
  * @param {Boolean} [options.includeZero] 0值是否显示为“-”，默认为true
  * @returns {*}
  */
@@ -75,7 +75,7 @@ const toPriceDash = (number, options) => {
         exchangeRate: 100,
         unitName: '',
         includeZero: true,
-        currency: '￥',
+        currency: '',
         ...options
     };
 
