@@ -66,7 +66,7 @@ const isNumericCharMix = (value, minLength, maxLength, ignoreWhite) => {
     if (ignoreWhite && (value + '').trim() == '') {
         return true;
     }
-    let reg = new RegExp('^[0-9A-Za-z]' + this._getLengthReg(minLength, maxLength) + '$');
+    let reg = new RegExp('^[0-9A-Za-z]' + _getLengthReg(minLength, maxLength) + '$');
     return reg.test(value.trim());
 };
 
@@ -96,7 +96,7 @@ const isChinese = (value, minLength, maxLength, ignoreWhite) => {
     if (ignoreWhite && value.trim() == '') {
         return true;
     }
-    let chsReg = new RegExp('^[\u4e00-\u9fa5]' + this._getLengthReg(minLength, maxLength) + '$');
+    let chsReg = new RegExp('^[\u4e00-\u9fa5]' + _getLengthReg(minLength, maxLength) + '$');
     return chsReg.test(value);
 };
 
@@ -112,7 +112,7 @@ const matchLength = (value, minLength, maxLength, ignoreWhite) => {
     if (ignoreWhite && value.trim() == '') {
         return true;
     }
-    let reg = new RegExp('^[\\s\\S]' + this._getLengthReg(minLength, maxLength) + '$');
+    let reg = new RegExp('^[\\s\\S]' + _getLengthReg(minLength, maxLength) + '$');
     return reg.test(value);
 };
 
