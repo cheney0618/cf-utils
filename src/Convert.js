@@ -134,10 +134,24 @@ const toRate = (value, precision = 8) => {
     return parseFloat((value / 100).toFixed(precision) + '');
 }
 
+/**
+ * 分转为元
+ * @param {Number} value 
+ * @param {Number} [exchange] 换算比例
+ * @param {Number} [fractionSize] 保留小数位数
+ */
+const toYuan = (value, exchange = 100, fractionSize = 2) => {
+    let k = value / exchange;
+
+    return k.toFixed(fractionSize);
+};
+
+
 export default {
     toSelectData,
     toIdentity,
     toRate,
+    toYuan,
     findItem,
     findItems,
 }
