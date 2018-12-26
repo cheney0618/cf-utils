@@ -80,7 +80,7 @@ const isMobilePhone = (mobilePhone, ignoreWhite) => {
     if (ignoreWhite && mobilePhone.trim() == '') {
         return true;
     }
-    let reg = new RegExp('^1([35879]{1}[0-9]{9})$');
+    let reg = new RegExp('^[1][3-9][0-9]{9}$');
     return reg.test(mobilePhone);
 };
 
